@@ -39,6 +39,7 @@
             this.comboBoxUpdateInterval = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.buttonStart = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
             this.richSplineChart1 = new SplineChart.RichSplineChart();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -52,6 +53,7 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.btnSave);
             this.panel1.Controls.Add(this.comboBoxPointsRemoved);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.comboBoxVisiblePoints);
@@ -137,13 +139,24 @@
             // buttonStart
             // 
             this.buttonStart.BackColor = System.Drawing.SystemColors.Control;
-            this.buttonStart.Location = new System.Drawing.Point(80, 120);
+            this.buttonStart.Location = new System.Drawing.Point(104, 126);
             this.buttonStart.Name = "buttonStart";
             this.buttonStart.Size = new System.Drawing.Size(144, 23);
             this.buttonStart.TabIndex = 6;
             this.buttonStart.Text = "&Stop Real Time Data";
             this.buttonStart.UseVisualStyleBackColor = false;
             this.buttonStart.Click += new System.EventHandler(this.buttonStart_Click);
+            // 
+            // btnSave
+            // 
+            this.btnSave.BackColor = System.Drawing.SystemColors.Control;
+            this.btnSave.Location = new System.Drawing.Point(6, 126);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(92, 23);
+            this.btnSave.TabIndex = 7;
+            this.btnSave.Text = "&Save Image";
+            this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // richSplineChart1
             // 
@@ -191,6 +204,7 @@
         private System.Windows.Forms.ComboBox comboBoxUpdateInterval;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonStart;
+        private System.Windows.Forms.Button btnSave;
     }
 }
 

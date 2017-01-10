@@ -25,7 +25,6 @@ namespace SplineChart
 
             this.chart1.Width = this.Width;
             this.chart1.Height = this.Height - 3;
-
         }
     }
 }

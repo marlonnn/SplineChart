@@ -90,5 +90,37 @@ namespace SplineChart
                 buttonStart.Text = "&Stop Real Time Data";
             }
         }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.InitialDirectory = System.Environment.CurrentDirectory;
+            saveFileDialog.Title = "保存文件";
+            //saveFileDialog.Filter = "PNG文件(*.png)|*.png|JPG文件(*.jpg)|*.jpg|所有文件(*.*)|*.*";
+            saveFileDialog.Filter = "PNG文件(*.png)|*.png";
+            //默认文件类型显示顺序  
+            saveFileDialog.FilterIndex = 1;
+            //记忆上次保存路径  
+            saveFileDialog.RestoreDirectory = true;
+
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                if (!string.IsNullOrEmpty(saveFileDialog.FileName))
+                {
+                    string localFilePath = saveFileDialog.FileName.ToString();
+                    chart1.SaveImage(localFilePath, ChartImageFormat.Png);
+                }
+            }
+        }
+
+        /// <summary>
+        /// 保存chart为图片，默认为PNG格式
+        /// </summary>
+        /// <param name="fileFullName">文件全名</param>
+        /// <param name="imageFormat">图片格式</param>
+        public void SaveImage(string fileFullName, ChartImageFormat imageFormat = ChartImageFormat.Png)
+        {
+            chart1.SaveImage(fileFullName, imageFormat);
+        }
     }
 }
