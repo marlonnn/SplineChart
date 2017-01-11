@@ -91,6 +91,7 @@
             this.Name = "RichSplineChart";
             this.Size = new System.Drawing.Size(368, 250);
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+
             this.ResumeLayout(false);
 
         }

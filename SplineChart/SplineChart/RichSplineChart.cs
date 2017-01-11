@@ -22,7 +22,6 @@ namespace SplineChart
         protected override void OnResize(EventArgs e)
         {
             base.OnResize(e);
-
             this.chart1.Width = this.Width;
             this.chart1.Height = this.Height - 3;
         }
